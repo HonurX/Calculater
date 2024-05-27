@@ -25,8 +25,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun addition(view: View) {
-        var firstnumber = binding.editTextNumber.text.toString().toIntOrNull()
-        var secondnumber = binding.editTextNumber2.text.toString().toIntOrNull()
+        var firstnumber = binding.editTextNumber.text.toString().toDoubleOrNull()
+        var secondnumber = binding.editTextNumber2.text.toString().toDoubleOrNull()
 
         if (firstnumber == null || secondnumber == null){
             Toast.makeText(this,"enter a number",Toast.LENGTH_LONG).show()
@@ -44,8 +44,8 @@ class MainActivity : AppCompatActivity() {
 
     fun subtraction(view: View) {
 
-        var firstnumber = binding.editTextNumber.text.toString().toIntOrNull()
-        var secondnumber = binding.editTextNumber2.text.toString().toIntOrNull()
+        var firstnumber = binding.editTextNumber.text.toString().toDoubleOrNull()
+        var secondnumber = binding.editTextNumber2.text.toString().toDoubleOrNull()
         if (firstnumber == null || secondnumber == null) {
             Toast.makeText(this,"enter a number",Toast.LENGTH_LONG).show()
         } else {
@@ -57,11 +57,32 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun multiplication(view: View) {
+        var firstnumber = binding.editTextNumber.text.toString().toDoubleOrNull()
+        var secondnumber = binding.editTextNumber2.text.toString().toDoubleOrNull()
+
+        if (firstnumber == null || secondnumber == null) {
+            Toast.makeText(this,"enter a number",Toast.LENGTH_LONG).show()
+        } else {
+            var result = firstnumber * secondnumber
+            binding.textView.text = "Result: ${result}"
+            Toast.makeText(this,"Well Done",Toast.LENGTH_LONG).show()
+        }
+
 
     }
 
 
     fun division(view: View) {
+        var firstnumber = binding.editTextNumber.text.toString().toDoubleOrNull()
+        var secondnumber = binding.editTextNumber2.text.toString().toDoubleOrNull()
+
+        if (firstnumber == null || secondnumber == null) {
+            Toast.makeText(this,"enter a number",Toast.LENGTH_LONG).show()
+        } else {
+            var result = firstnumber / secondnumber
+            binding.textView.text = "Result: ${result}"
+            Toast.makeText(this,"Well Done",Toast.LENGTH_LONG).show()
+        }
 
     }
 }
